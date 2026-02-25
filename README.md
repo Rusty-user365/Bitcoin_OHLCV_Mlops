@@ -4,13 +4,15 @@
 # ML/MLOps Internship — Task 0 Technical Assessment
 
 ## 📌 Overview
-This project demonstrates a minimal **MLOps-style batch job** in Python.  
-It showcases:
-- **Reproducibility**: deterministic runs via config + seed  
-- **Observability**: structured logs and machine-readable metrics  
-- **Deployment readiness**: Dockerized, one-command execution  
+# MLOps Task: Trading Signal Pipeline
 
-The workflow mirrors trading-signal pipelines used in production environments.
+A minimal, reproducible MLOps batch job that calculates a rolling mean on OHLCV data, generates a binary trading signal, and outputs strictly structured metrics.
+
+## Local Run Instructions
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
 
 ---
 
