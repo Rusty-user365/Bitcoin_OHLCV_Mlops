@@ -1,8 +1,6 @@
+
 # Bitcoin_OHLCV_Mlops
 ---
-
-# ML/MLOps Internship — Task 0 Technical Assessment
-
 ## 📌 Overview
 # MLOps Task: Trading Signal Pipeline
 
@@ -52,12 +50,12 @@ python run.py --input data.csv --config config.yaml --output metrics.json --log-
 
 ### 1. Build the image
 ```bash
-docker build -t mlops-task .
+docker build -t bitcoin-ohlcv-mlops .
 ```
 
 ### 2. Run the container
 ```bash
-docker run --rm mlops-task
+docker run --rm -it bitcoin-ohlcv-mlops
 ```
 
 ### 3. Behavior
@@ -83,16 +81,19 @@ docker run --rm mlops-task
 
 ---
 
-## 📝 Logging Details
-The log file (`run.log`) includes:
-- Job start timestamp  
-- Config validation (seed, window, version)  
-- Rows loaded  
-- Processing steps (rolling mean, signal generation)  
-- Metrics summary  
-- Job end + status  
-- Exceptions / validation errors  
+## 📝 Log Sample 
 
+The job generates a detailed execution trace in `run.log`. Below is a sample from a successful run:
+
+```log
+2026-02-26 11:35:11,726 - INFO - Job started [cite: 73]
+2026-02-26 11:35:11,726 - INFO - Config loaded and validated. version=v1, seed=42, window=5 [cite: 74]
+2026-02-26 11:35:14,404 - INFO - Rows loaded: 3334058 [cite: 74]
+2026-02-26 11:35:14,404 - INFO - Computing rolling mean... [cite: 76]
+2026-02-26 11:35:14,497 - INFO - Generating signals... [cite: 76]
+2026-02-26 11:35:14,512 - INFO - Metrics summary: {"version": "v1", "rows_processed": 3334058, "metric": "signal_rate", "value": 0.5015, "latency_ms": 2789, "seed": 42, "status": "success"} [cite: 77]
+2026-02-26 11:35:14,512 - INFO - Job ended successfully [cite: 78]
+```
 ---
 
 ## ✅ Evaluation Rubric
@@ -108,3 +109,5 @@ The log file (`run.log`) includes:
 - Hardcoded paths or missing README steps  
 
 
+
+---
