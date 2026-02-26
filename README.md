@@ -8,17 +8,12 @@ A minimal, reproducible MLOps batch job that calculates a rolling mean on OHLCV 
 
 ## Local Run Instructions
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-
----
 
 ## ⚙️ Project Structure
 ```
 ├── run.py              # Main entry point
 ├── config.yaml         # Configuration file (seed, window, version)
-├── data.csv            # Dataset (OHLCV, 10,000 rows)
+├── data.csv            # Dataset (OHLCV, 15,1226 rows)
 ├── requirements.txt    # Python dependencies
 ├── Dockerfile          # Containerization setup
 ├── README.md           # Documentation
@@ -28,11 +23,12 @@ A minimal, reproducible MLOps batch job that calculates a rolling mean on OHLCV 
 
 ---
 
-## 🚀 Local Execution
+## Local Run Instructions
 
-### 1. Install dependencies
+### 1.Create and activate the environment
 ```bash
-pip install -r requirements.txt
+conda env create -f environment.yml 
+conda activate mlops_env
 ```
 
 ### 2. Run the program
@@ -46,16 +42,16 @@ python run.py --input data.csv --config config.yaml --output metrics.json --log-
 
 ---
 
-## 🐳 Docker Instructions
+## 🐳 Docker Run Instructions
 
-### 1. Build the image
+### 1. Pull the image
 ```bash
-docker build -t mlops-task .
+docker pull anxious01/mlops-task:latest
 ```
 
 ### 2. Run the container
 ```bash
-docker run --rm mlops-task
+docker run --rm anxious01/mlops-task:latest
 ```
 
 ### 3. Behavior
@@ -69,13 +65,13 @@ docker run --rm mlops-task
 ## 📊 Example Metrics Output
 ```json
 {
-  "version": "v1",
-  "rows_processed": 10000,
-  "metric": "signal_rate",
-  "value": 0.4990,
-  "latency_ms": 127,
-  "seed": 42,
-  "status": "success"
+    "version": "v1",
+    "rows_processed": 151226,
+    "metric": "signal_rate",
+    "value": 0.5087,
+    "latency_ms": 211,
+    "seed": 42,
+    "status": "success"
 }
 ```
 
