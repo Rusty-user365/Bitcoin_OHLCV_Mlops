@@ -85,13 +85,13 @@ docker run --rm mlops-task
 
 ## 📝 Logging Details
 The log file (`run.log`) includes:
-2026-02-26 11:35:11,726 - INFO - Job started
-2026-02-26 11:35:11,726 - INFO - Config loaded and validated. version=v1, seed=42, window=5
-2026-02-26 11:35:14,404 - INFO - Rows loaded: 3334058
-2026-02-26 11:35:14,404 - INFO - Computing rolling mean...
-2026-02-26 11:35:14,497 - INFO - Generating signals...
-2026-02-26 11:35:14,512 - INFO - Metrics summary: {"version": "v1", "rows_processed": 3334058, "metric": "signal_rate", "value": 0.5015, "latency_ms": 2789, "seed": 42, "status": "success"}
-2026-02-26 11:35:14,512 - INFO - Job ended successfully
+-2026-02-26 11:35:11,726 - INFO - Job started
+-2026-02-26 11:35:11,726 - INFO - Config loaded and validated. version=v1, seed=42, window=5
+-2026-02-26 11:35:14,404 - INFO - Rows loaded: 3334058
+-2026-02-26 11:35:14,404 - INFO - Computing rolling mean...
+-2026-02-26 11:35:14,497 - INFO - Generating signals...
+-2026-02-26 11:35:14,512 - INFO - Metrics summary: {"version": "v1", "rows_processed": 3334058, "metric": "signal_rate", "value": 0.5015, "latency_ms": 2789,  "seed": 42, "status": "success"}
+-2026-02-26 11:35:14,512 - INFO - Job ended successfully
 ---
 
 ## ✅ Evaluation Rubric
