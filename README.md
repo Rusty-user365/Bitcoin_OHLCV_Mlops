@@ -50,12 +50,12 @@ python run.py --input data.csv --config config.yaml --output metrics.json --log-
 
 ### 1. Build the image
 ```bash
-docker build -t bitcoin-ohlcv-mlops .
+docker build -t mlops-task .
 ```
 
 ### 2. Run the container
 ```bash
-docker run --rm -it bitcoin-ohlcv-mlops
+docker run --rm mlops-task
 ```
 
 ### 3. Behavior
