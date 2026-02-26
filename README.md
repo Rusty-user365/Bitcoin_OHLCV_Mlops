@@ -1,9 +1,6 @@
 
 # Bitcoin_OHLCV_Mlops
 ---
-
-# ML/MLOps Internship — Task 0 Technical Assessment
-
 ## 📌 Overview
 # MLOps Task: Trading Signal Pipeline
 
