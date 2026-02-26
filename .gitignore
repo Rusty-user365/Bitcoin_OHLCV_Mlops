@@ -10,7 +10,8 @@ __pycache__/
 #Files
 data/
 /data
-
+.vscode
+.ipynb
 
 
 # Distribution / packaging
