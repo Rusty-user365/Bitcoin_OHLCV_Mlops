@@ -52,12 +52,12 @@ python run.py --input data.csv --config config.yaml --output metrics.json --log-
 
 ### 1. Build the image
 ```bash
-docker build -t mlops-task .
+docker build -t bitcoin-ohlcv-mlops .
 ```
 
 ### 2. Run the container
 ```bash
-docker run --rm mlops-task
+docker run --rm -it bitcoin-ohlcv-mlops
 ```
 
 ### 3. Behavior
@@ -168,7 +168,7 @@ docker run --rm mlops-task
 
 ---
 
-## 📝 Logging Details
+## 📝 Log Sample 
 
 The job generates a detailed execution trace in `run.log`. Below is a sample from a successful run:
 
@@ -198,17 +198,3 @@ The job generates a detailed execution trace in `run.log`. Below is a sample fro
 
 
 ---
-
-## ✅ Evaluation Rubric
-- **Correctness & determinism (40%)**: signal logic, reproducible results  
-- **Dockerization (25%)**: builds + runs cleanly, no hardcoded paths  
-- **Code quality (20%)**: clean structure, validation, error handling  
-- **Observability (15%)**: meaningful logs + error reporting  
-
-⚠️ **Auto-fail conditions**:
-- Docker build/run fails  
-- Metrics JSON not written  
-- Non-deterministic outputs  
-- Hardcoded paths or missing README steps  
-
-
