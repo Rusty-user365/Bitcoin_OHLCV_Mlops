@@ -38,7 +38,7 @@ cd  ./Bitcoin_OHLCV_Mlops
 ```bash
 code .
 ```
-### 4.Open Terminal 
+### 4.Open Terminal (Inside Vscode)
 ```bash
 Ctrl+`
 ```
@@ -72,7 +72,7 @@ python run.py --input data.csv --config config.yaml --output metrics.json --log-
 
 ## 🐳 Docker Run Instructions
 
-###1.Login with Docker(Optional if already done)
+###1. Login with Docker(Optional if already done)
 ```bash
  docker login
 ```
