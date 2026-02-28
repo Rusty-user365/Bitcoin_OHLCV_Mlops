@@ -25,13 +25,17 @@ A minimal, reproducible MLOps batch job that calculates a rolling mean on OHLCV 
 
 ## Local Run Instructions
 
-### 1.Create and activate the environment
+### 1.Create the environment
 ```bash
 conda env create -f environment.yml 
+
+```
+### 2.Activate the environment
+```bash
 conda activate mlops_env
 ```
 
-### 2. Run the program
+### 3. Run the program
 ```bash
 python run.py --input data.csv --config config.yaml --output metrics.json --log-file run.log
 ```
