@@ -23,7 +23,31 @@ A minimal, reproducible MLOps batch job that calculates a rolling mean on OHLCV 
 
 ---
 
-## Local Run Instructions
+## Local Setup Instructions(using Git Bash)
+
+### 1.Clone the repo
+```bash
+git clone https://github.com/Rusty-user365/Bitcoin_OHLCV_Mlops.git
+
+```
+### 2.Change the directory to 
+```bash
+cd  ./Bitcoin_OHLCV_Mlops
+```
+### 3.Open Vscode 
+```bash
+code .
+```
+### 4.Open Terminal 
+```bash
+Ctrl+`
+```
+
+
+
+---
+
+## Local Run Instructions(Powershell of Vscode)
 
 ### 1.Create the environment
 ```bash
@@ -40,7 +64,7 @@ conda activate mlops_env
 python run.py --input data.csv --config config.yaml --output metrics.json --log-file run.log
 ```
 
-### 3. Expected output
+### 4. Expected output
 - **metrics.json** → structured metrics (success or error)  
 - **run.log** → detailed logs of execution steps  
 
@@ -48,17 +72,22 @@ python run.py --input data.csv --config config.yaml --output metrics.json --log-
 
 ## 🐳 Docker Run Instructions
 
-### 1. Pull the image
+###1.Login with Docker(Optional if already done)
+```bash
+ docker login
+```
+
+### 2. Pull the image
 ```bash
 docker pull anxious01/mlops-task:latest
 ```
 
-### 2. Run the container
+### 3. Run the container
 ```bash
 docker run --rm anxious01/mlops-task:latest
 ```
 
-### 3. Behavior
+### 4. Behavior
 - Container includes `data.csv` and `config.yaml`  
 - Produces `metrics.json` and `run.log`  
 - Prints final metrics JSON to stdout  
